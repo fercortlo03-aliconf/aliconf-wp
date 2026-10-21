@@ -32,7 +32,7 @@ header.top{background:#fff;border-bottom:6px solid var(--red)}
 header.top .wrap{padding-top:18px;padding-bottom:18px}
 .logo{display:block;width:min(100%,400px);height:auto;margin:0 auto}
 .brand{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:-.01em;line-height:1.1}
-.hero{padding:56px 0 48px}
+.hero{padding:56px 20px 48px}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,6.5vw,4rem);line-height:1.04;letter-spacing:-.025em;margin:0 0 20px;color:var(--navy);max-width:18ch}
 .hero p{max-width:58ch;color:var(--muted);margin:0;font-size:1.12rem}
 .hero strong{color:var(--text)}
@@ -42,7 +42,7 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,4vw,2.2rem)
 .car{position:relative}
 .viewport{overflow:hidden;border-radius:14px}
 .track{display:flex;transition:transform .7s ease}
-.slide{flex:0 0 100%;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:2px}
+.slide{flex:0 0 100%;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:2px;align-content:center}
 .slide .b{background:#fff;border:1px solid var(--line);border-radius:12px;height:clamp(96px,22vw,150px);display:flex;align-items:center;justify-content:center;padding:clamp(10px,3vw,24px)}
 .slide img{max-width:100%;max-height:100%;object-fit:contain}
 .slide .b span{font-family:var(--display);font-weight:800;font-size:clamp(1rem,3.4vw,1.6rem);color:#12285a}
@@ -59,14 +59,14 @@ footer a{text-decoration:underline}
 .dots button{width:12px;height:12px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
 .dots button[aria-current="true"]{background:var(--red);transform:scale(1.25)}
 @media (prefers-reduced-motion:reduce){.track{transition:none}}
-.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.two{display:grid;grid-template-columns:1fr;gap:18px}
 .card{background:var(--bg);border:1px solid var(--line);border-top:5px solid var(--red);border-radius:6px 6px 14px 14px;padding:20px;display:flex;flex-direction:column;gap:8px}
 .card h3{font-family:var(--display);margin:0;color:var(--navy);font-size:1.2rem}
 .card p{margin:0;color:var(--muted)}
 .btn{align-self:flex-start;margin-top:auto;display:inline-block;background:var(--red);color:#fff;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px}
 .hrs{color:var(--text)!important;font-size:.97rem}
 .hrs strong{color:var(--navy)}
-.why{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.why{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:14px}
 .why li{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--red);border-radius:6px 14px 14px 6px;padding:18px}
 .why strong{display:block;font-family:var(--display);font-size:1.5rem;color:var(--navy);line-height:1.1;margin-bottom:4px}
 .why span{color:var(--muted);font-size:.97rem}
@@ -75,6 +75,16 @@ footer{background:var(--navy);color:var(--bg);padding:28px 0 34px;font-size:.95r
 .open-now{margin:0;font-weight:600;font-size:.95rem}
 .open-now.on{color:#1a7f37}
 .open-now.off{color:var(--red)}
+@media (min-width:560px){.why{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.why{grid-template-columns:repeat(4,1fr)}.two{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){
+  .hero{padding:36px 20px 32px}
+  section{padding:34px 0}
+  .ctas .btn{flex:1 1 100%;text-align:center}
+  .card .btn{align-self:stretch;text-align:center}
+}
+footer{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+img{max-width:100%}
 </style>
 <meta property="og:url" content="https://alimentosconfiables.com/">
 <meta property="og:image" content="https://alimentosconfiables.com/og-image.png">
@@ -151,7 +161,7 @@ footer{background:var(--navy);color:var(--bg);padding:28px 0 34px;font-size:.95r
     <div class="card"><h3>El Calvario</h3>
       <p> Mercado de la Merced, Nave Menor. C. Abraham Olvera, Cda. San Ciprian esq, La Merced, Centro, Venustiano Carranza, 15100 Ciudad de México, CDMX. Locales 424 y 425</p>
       <p class="hrs"><strong>Horario</strong><br>Lunes a sábado: 6:00 am – 5:00 pm<br>Domingo: 6:00 am – 2:00 pm</p>
-      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mercado+de+la+Merced+Nave+Menor%2C+Ciudad+de+M%C3%A9xico" target="_blank" rel="noopener">Cómo llegar</a></div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mercado+de+la+Merced+Nave+Menor+C.+Abraham+Olvera+La+Merced+Venustiano+Carranza+15100+Ciudad+de+M%C3%A9xico" target="_blank" rel="noopener">Cómo llegar</a></div>
   </div>
 </div></section>
 </main>
