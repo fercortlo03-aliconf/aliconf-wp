@@ -72,7 +72,39 @@ footer a{text-decoration:underline}
 .why span{color:var(--muted);font-size:.97rem}
 .wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#1fa855;color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.28);z-index:20}
 footer{background:var(--navy);color:var(--bg);padding:28px 0 34px;font-size:.95rem; text-align:center}
+.open-now{margin:0;font-weight:600;font-size:.95rem}
+.open-now.on{color:#1a7f37}
+.open-now.off{color:var(--red)}
 </style>
+<meta property="og:url" content="https://alimentosconfiables.com/">
+<meta property="og:image" content="https://alimentosconfiables.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+[
+{"@context":"https://schema.org","@type":"GroceryStore",
+ "name":"Alimentos Confiables Cortés","url":"https://alimentosconfiables.com/",
+ "image":"https://alimentosconfiables.com/og-image.png","telephone":"+52 81 4888 61 03",
+ "sameAs":["https://www.instagram.com/alimentosconfiablescortes/"],
+ "address":{"@type":"PostalAddress","streetAddress":"Cda. San Ciprián 96, La Merced, Merced Balbuena","addressLocality":"Ciudad de México","addressRegion":"CDMX","postalCode":"15810","addressCountry":"MX"},
+ "openingHoursSpecification":[
+  {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"06:00","closes":"17:00"},
+  {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"06:00","closes":"14:00"}]},
+{"@context":"https://schema.org","@type":"GroceryStore",
+ "name":"La Principal","url":"https://alimentosconfiables.com/","telephone":"+52 81 4888 61 03",
+ "address":{"@type":"PostalAddress","streetAddress":"Gobernador Melchor Múzquiz S/N, local 64, San Miguel Chapultepec I Sección","addressLocality":"Ciudad de México","addressRegion":"CDMX","postalCode":"11840","addressCountry":"MX"},
+ "openingHoursSpecification":[
+  {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"18:00"}]},
+{"@context":"https://schema.org","@type":"GroceryStore",
+ "name":"El Calvario","url":"https://alimentosconfiables.com/","telephone":"+52 81 4888 61 03",
+ "address":{"@type":"PostalAddress","streetAddress":"Mercado de la Merced, Nave Menor. C. Abraham Olvera, Cda. San Ciprian esq, La Merced, Centro, Venustiano Carranza, 15100 Ciudad de México, CDMX. Locales 424 y 425","addressLocality":"Ciudad de México","addressRegion":"CDMX","addressCountry":"MX"},
+ "openingHoursSpecification":[
+  {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"06:00","closes":"17:00"},
+  {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"06:00","closes":"14:00"}]}
+]
+</script>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -117,7 +149,7 @@ footer{background:var(--navy);color:var(--bg);padding:28px 0 34px;font-size:.95r
       <p class="hrs"><strong>Horario</strong><br>Lunes a sábado: 7:00 am – 6:00 pm<br>Domingo: cerrado</p>
       <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Gobernador+Melchor+M%C3%BAzquiz%2C+San+Miguel+Chapultepec+I+Secci%C3%B3n%2C+11840+Ciudad+de+M%C3%A9xico" target="_blank" rel="noopener">Cómo llegar</a></div>
     <div class="card"><h3>El Calvario</h3>
-      <p> Mercado de la Merced, Nave Menor - C. Abraham Olvera, Cda. San Ciprian esq, La Merced, Centro, Venustiano Carranza, 15100 Ciudad de México, CDMXlocales 424 y 425</p>
+      <p> Mercado de la Merced, Nave Menor. C. Abraham Olvera, Cda. San Ciprian esq, La Merced, Centro, Venustiano Carranza, 15100 Ciudad de México, CDMX. Locales 424 y 425</p>
       <p class="hrs"><strong>Horario</strong><br>Lunes a sábado: 6:00 am – 5:00 pm<br>Domingo: 6:00 am – 2:00 pm</p>
       <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mercado+de+la+Merced+Nave+Menor%2C+Ciudad+de+M%C3%A9xico" target="_blank" rel="noopener">Cómo llegar</a></div>
   </div>
@@ -149,6 +181,28 @@ footer{background:var(--navy);color:var(--bg);padding:28px 0 34px;font-size:.95r
   car.addEventListener("focusin",stop);car.addEventListener("focusout",start);
   document.addEventListener("visibilitychange",function(){document.hidden?stop():start()});
   mark();start();
+})();
+</script>
+  <script>
+(function(){
+  var W=[360,1020], S=[360,840], P=[420,1080];
+  var H={
+    "Alimentos Confiables Cortés":[S,W,W,W,W,W,W],
+    "El Calvario":[S,W,W,W,W,W,W],
+    "La Principal":[null,P,P,P,P,P,P]
+  };
+  var days={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+  function now(){
+    var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Mexico_City",weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date()),o={};
+    p.forEach(function(x){o[x.type]=x.value});
+    return {d:days[o.weekday],m:parseInt(o.hour,10)*60+parseInt(o.minute,10)};
+  }
+  var t=now();
+  document.querySelectorAll(".card h3").forEach(function(h){
+    var s=H[h.textContent.trim()]; if(!s) return;
+    var r=s[t.d], open=r&&t.m>=r[0]&&t.m<r[1];
+    h.insertAdjacentHTML("afterend",'<p class="open-now '+(open?"on":"off")+'">'+(open?"● Abierto ahora":"● Cerrado ahora")+"</p>");
+  });
 })();
 </script>
 </body>
