@@ -191,7 +191,7 @@ h1 .w>span{display:inline-block;animation:rise 760ms var(--ease-out) both;animat
 .hero{padding-bottom:clamp(32px,5vw,56px)}
 .sec-intro{color:var(--mute);max-width:56ch;margin:-20px 0 32px}
 @media (min-width:560px){.cats{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1000px){.cats{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:1000px){#categorias .cats{grid-template-columns:repeat(6,1fr)}#categorias .cat{grid-column:span 2}#categorias .cat:nth-child(n+4){grid-column:span 3}#categorias .cat:nth-child(n+4) img{aspect-ratio:16/9}}
 
 
 /* Páginas internas */
