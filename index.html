@@ -344,9 +344,8 @@ h1 .w>span{display:inline-block;animation:rise 760ms var(--ease-out) both;animat
     <label>Mensaje<textarea name="mensaje" required placeholder="¿Qué producto buscas o qué necesitas?"></textarea></label>
     <div class="form-actions">
       <button class="btn wa" id="sendWa" type="submit">Enviar por WhatsApp</button>
-      <button class="btn ghost" id="sendMail" type="button">Enviar por correo</button>
     </div>
-    <p class="form-note">Se abrirá WhatsApp o tu correo con el mensaje listo para enviar.</p>
+    <p class="form-note">Se abrirá WhatsApp con el mensaje listo para enviar.</p>
   </form>
 </div></section>
 
@@ -394,7 +393,6 @@ h1 .w>span{display:inline-block;animation:rise 760ms var(--ease-out) both;animat
 })();
 (function(){
   var PHONE="528148886103";
-  var EMAIL=""; // <-- escribe aquí el correo del negocio para activar "Enviar por correo"
   var f=document.getElementById("contactForm"); if(!f) return;
   var mail=document.getElementById("sendMail"),wa=document.getElementById("sendWa"); if(!EMAIL) mail.hidden=true;
   function msg(){
